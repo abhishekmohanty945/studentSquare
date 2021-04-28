@@ -2,7 +2,7 @@ import { SET_ALERT, REMOVE_ALERT } from '../actions/types';
 
 const initialState = [];
 
-export default function name_to_prevent_anonymous_function(state = initialState, action) {
+export default function alert_func(state = initialState, action) {
     const { type, payload } = action;
 
     switch (type) {
