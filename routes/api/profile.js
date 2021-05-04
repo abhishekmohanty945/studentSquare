@@ -28,8 +28,8 @@ router.get('/me', auth, async (req, res) => {
 //@desc     Update current user's profile
 //@access   Private
 router.post('/', [auth,[
-    check('status', 'status is required').not().isEmpty(),
-    check('skills', 'skills are required').not().isEmpty()
+    check('status', 'status is required').notEmpty(),
+    check('skills', 'skills are required').notEmpty()
     ]
 ], 
 async (req, res) => {
@@ -62,8 +62,9 @@ async (req, res) => {
     if(bio) profileFields.bio = bio;
     if(status) profileFields.status = status;
     if(githubusername) profileFields.githubusername = githubusername;
-    if(skills) {
-        profileFields.skills = skills.split(',').map(skill => skill.trim());
+    if (skills) {
+        profileFields.skills = skills;
+        Array.isArray(skills) ? skills : skills.split(',').map((skill) => skill.trim());
     }
     
     // build social 
