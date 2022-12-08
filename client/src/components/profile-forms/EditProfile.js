@@ -37,7 +37,6 @@ const EditProfile = ({
             location: loading || !profile.location ? '': profile.location,
             status: loading || !profile.status ? '': profile.status,
             skills: loading || !profile.skills ? '': profile.skills,
-            githubusername: loading || !profile.githubusername ? '': profile.githubusername,
             bio: loading || !profile.bio ? '': profile.bio,
             twitter: loading || !profile.social ? '': profile.social.twitter,
             facebook: loading || !profile.social ? '': profile.social.facebook,
@@ -52,7 +51,6 @@ const EditProfile = ({
         location,
         status,
         skills,
-        githubusername,
         bio,
         twitter,
         facebook,
@@ -136,19 +134,6 @@ const EditProfile = ({
               />
               <small className="form-text">
                 Please use comma separated values (eg. HTML,CSS,JavaScript,PHP)
-              </small>
-            </div>
-            <div className="form-group">
-              <input
-                type="text"
-                placeholder="Github Username"
-                name="githubusername"
-                value={githubusername}
-                onChange={onChange}
-              />
-              <small className="form-text">
-                If you want your latest repos and a Github link, include your
-                username
               </small>
             </div>
             <div className="form-group">

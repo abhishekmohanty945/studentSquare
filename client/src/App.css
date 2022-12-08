@@ -17,8 +17,8 @@ body {
   font-family: 'Raleway', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: #fff;
-  color: #333;
+  background-color: #333;
+  color: #fff;
 }
 
 a {
@@ -30,8 +30,12 @@ ul {
   list-style: none;
 }
 
-img {
+/* img {
   width: 100%;
+} */
+
+.logo-size {
+  width: 25px;
 }
 
 /* Utilities */
@@ -165,11 +169,14 @@ img {
 }
 
 .btn-light,
-.bg-light,
 .badge-light,
 .alert-light {
   background: var(--light-color);
   color: #333;
+}
+
+.bg-light {
+  border: var(--primary-color);
 }
 
 .btn-dark,
@@ -242,7 +249,7 @@ img {
 .form .form-text {
   display: block;
   margin-top: 0.3rem;
-  color: #888;
+  color: #fff;
 }
 
 .form input[type='text'],
@@ -256,6 +263,7 @@ img {
   padding: 0.4rem;
   font-size: 1.2rem;
   border: 1px solid #ccc;
+  background: var(--dark-color);
 }
 
 .form input[type='submit'],
@@ -294,8 +302,13 @@ button {
   text-align: left;
 }
 
+.table {
+  border-color: white;
+  border-spacing: 0;
+}
+
 .table th {
-  background: var(--light-color);
+  background: #17a2b8;
 }
 
 /* Navbar */
@@ -308,7 +321,6 @@ button {
   z-index: 1;
   width: 100%;
   top: 0;
-  border-bottom: solid 1px var(--primary-color);
   opacity: 0.9;
 }
 
@@ -515,6 +527,10 @@ button {
   .navbar {
     display: block;
     text-align: center;
+  }
+
+  .logo-size {
+    width: 25px;
   }
 
   .navbar ul {

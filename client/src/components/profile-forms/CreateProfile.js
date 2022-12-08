@@ -53,24 +53,24 @@ const CreateProfile = ({ createProfile, history }) => {
           <form className="form" onSubmit={onSubmit}>
             <div className="form-group">
               <select name="status" value={status} onChange={onChange}>
-                <option>* Select Professional Status</option>
-                <option value="Developer">Developer</option>
-                <option value="Junior Developer">Junior Developer</option>
-                <option value="Senior Developer">Senior Developer</option>
-                <option value="Manager">Manager</option>
-                <option value="Student or Learning">Student or Learning</option>
-                <option value="Instructor">Instructor or Teacher</option>
-                <option value="Intern">Intern</option>
+                <option>* Select Student Status</option>
+                <option value="Freshman">Freshman</option>
+                <option value="Sophomore">Sophomore</option>
+                <option value="Junior">Junior</option>
+                <option value="Senior">Senior</option>
+                <option value="Undergrad">Undergrad</option>
+                <option value="Grad">Grad</option>
+                <option value="Professor/Teacher">Professor/Teacher</option>
                 <option value="Other">Other</option>
               </select>
               <small className="form-text">
-                Give us an idea of where you are at in your career
+                Give us an idea of where you are
               </small>
             </div>
             <div className="form-group">
               <input
                 type="text"
-                placeholder="Company"
+                placeholder="University"
                 name="company"
                 value={company}
                 onChange={onChange}
@@ -113,19 +113,6 @@ const CreateProfile = ({ createProfile, history }) => {
               />
               <small className="form-text">
                 Please use comma separated values (eg. HTML,CSS,JavaScript,PHP)
-              </small>
-            </div>
-            <div className="form-group">
-              <input
-                type="text"
-                placeholder="Github Username"
-                name="githubusername"
-                value={githubusername}
-                onChange={onChange}
-              />
-              <small className="form-text">
-                If you want your latest repos and a Github link, include your
-                username
               </small>
             </div>
             <div className="form-group">
